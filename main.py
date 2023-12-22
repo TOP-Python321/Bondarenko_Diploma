@@ -1,8 +1,5 @@
-from config_data.config import BOT_TOKEN
-
-
+from environs import Env
 from aiogram import Bot, Dispatcher
-
 from aiogram.filters import Command, CommandStart
 from aiogram.types import Message
 
