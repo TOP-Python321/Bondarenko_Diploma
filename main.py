@@ -1,10 +1,12 @@
-from environs import Env
+from config_data.config import load_config
+
 from aiogram import Bot, Dispatcher
 from aiogram.filters import Command, CommandStart
 from aiogram.types import Message
 
+config = load_config(None)
 
-bot = Bot(token= BOT_TOKEN)
+bot = Bot(token=config.tg_bot.token)
 
 dp = Dispatcher()
 
